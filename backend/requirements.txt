@@ -1,0 +1,16 @@
+fastapi
+uvicorn[standard]
+python-multipart
+pydantic
+pydantic-settings
+aiofiles
+sqlalchemy
+aiosqlite
+python-dotenv
+httpx
+websockets
+numpy
+Pillow
+imageio-ffmpeg
+scipy
+edge-tts
