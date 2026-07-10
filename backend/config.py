@@ -26,9 +26,9 @@ class Settings(BaseSettings):
     CPU_OFFLOAD: bool = True
     
     VIDEO_CODEC: str = "libx264"
-    VIDEO_CRF: int = 18
+    VIDEO_CRF: int = 16
     AUDIO_CODEC: str = "aac"
-    AUDIO_BITRATE: str = "192k"
+    AUDIO_BITRATE: str = "320k"
     
     TTS_MODEL: str = "tts_models/en/ljspeech/tacotron2-DDC"
     MUSIC_DIR: Path = Path(__file__).parent.parent / "assets" / "music"

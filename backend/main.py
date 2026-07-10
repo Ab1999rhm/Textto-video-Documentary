@@ -434,7 +434,7 @@ async def generate_scene_shots(
     }
     cloud_gen = CloudVideoGenerator(cloud_config)
     
-    width, height = (1024, 576) if project.aspect_ratio == "16:9" else (576, 1024)
+    width, height = (1920, 1080) if project.aspect_ratio == "16:9" else (1080, 1920)
     
     shots = scene.shots or []
     scene.image_status = "generating"
@@ -519,7 +519,7 @@ async def regenerate_shot(
         "image_model": project.image_model,
     }
     cloud_gen = CloudVideoGenerator(cloud_config)
-    width, height = (1024, 576) if project.aspect_ratio == "16:9" else (576, 1024)
+    width, height = (1920, 1080) if project.aspect_ratio == "16:9" else (1080, 1920)
     
     shot_path = str(project_dir / f"scene_{scene.scene_number:03d}_shot_{shot_id:03d}.png")
     
@@ -1204,7 +1204,7 @@ async def run_generation_pipeline(project_id: str):
             project_dir = settings.OUTPUT_DIR / project_id
             project_dir.mkdir(parents=True, exist_ok=True)
             
-            width, height = (1024, 576) if project.aspect_ratio == "16:9" else (576, 1024)
+            width, height = (1920, 1080) if project.aspect_ratio == "16:9" else (1080, 1920)
             
             cloud_config = {
                 "cloudflare_account_id": settings.CLOUDFLARE_ACCOUNT_ID,
